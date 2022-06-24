@@ -72,12 +72,12 @@ nav{
 	display: inline-block;
 	font-family: 'Work Sans', sans-serif;
 	font-size: 1em;
-	font-weight: 500 !important;
+	font-weight: 600 !important;
 	color: black;
 
 
 	margin-top: .2em;
-	margin-left: .2em;
+	margin-left: .3em;
 	margin-bottom: .3em;
 	text-transform: uppercase;
 	text-decoration: none;
