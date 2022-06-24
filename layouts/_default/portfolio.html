@@ -41,7 +41,7 @@ h1{
 		{{$contents := readDir $path}}
 		{{range seq  (len $contents)}}
 			<!-- IMAGES FORMAT-->
-			{{$format := (printf ".jpg")}}
+			{{$format := (printf ".webp")}}
 			<!-- NAME AND FILENAME -->
 			{{$name := (printf "%s%s" (string .) $format)}} 
 			{{$filename := printf "%s/%s" (replace $path "static" "") $name}}
