@@ -1,5 +1,5 @@
 ---
-data: gallery/misc
+data: misc
 title: Misc
 layout: portfoliotest
 ---

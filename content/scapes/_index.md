@@ -1,5 +1,5 @@
 ---
-data: gallery/scapes
+data: scapes
 title: Scapes
 layout: portfoliotest
 ---

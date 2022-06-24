@@ -1,5 +1,5 @@
 ---
-data: gallery/portraits
+data: portraits
 title: Portraits
 layout: portfoliotest
 ---
