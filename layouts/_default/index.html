@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{partial "styles.html" .}}
+	<title>{{.Params.title}}</title>
+	<link rel="icon" href="/graphics/logo.jpg" type="image/x-icon">
+	<script src="/js/toclipboard.js"></script>
+</head>
+<body>
+<div class="main">
+
+ 	<!-- HEADER -->
+ 	{{partial "header.html" .}}
+ 	
+
+ 	<article >
+ 		
+ 		{{ .Content | replaceRE "<img" "<img class=\"articleimg \">" | safeHTML }}
+ 	</article>
+
+ 	<footer>
+		<a class="contactimg" href="https://www.instagram.com/oliverklimes/"><img src="/graphics/ig.svg" alt="img"></a>
+		<a class="contactimg" href="https://twitter.com/oolikklimes"><img src="/graphics/twitter.svg" alt="img"></a>
+        <a class="contactimg" onclick="toClipBoard()" href=""><img src="/graphics/gmail.svg" alt="img"></a>
+        <a class="contactimg" href="https://github.com/napoleon101"><img src="/graphics/gith.svg" alt="img"></a>
+ 	</footer>
+
+ </div>
+</body>
+</html>

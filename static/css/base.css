@@ -1,0 +1,279 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Work Sans', sans-serif;
+*/
+
+
+/*GLOBAL*/
+body{
+	height: 100%;
+}
+
+.main{
+	height: 100%;
+	margin: 2.6em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+
+strong{
+	font-weight: 600 !important;
+}
+
+*::selection {
+  background-color: var(--clr-accent);
+  color: white;
+}
+
+
+
+/*HEADER*/
+
+header{
+	position: relative;
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+	height: auto;
+}
+
+header > .logo,
+header > nav{
+	display: table-cell;
+}
+header > nav{
+	text-align: right;
+}
+
+nav{
+	height: 100%;
+	position: relative;
+	vertical-align: middle;	
+}
+.logopic{
+	margin: 0;
+    padding: 0;
+ 	max-height: 100%;
+    max-width: 3.2em;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.nav_link{
+	display: inline-block;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1em;
+	font-weight: 500 !important;
+	color: black;
+
+
+	margin-top: .2em;
+	margin-left: .2em;
+	margin-bottom: .3em;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.nav_link:active,
+.nav_link:hover{
+	color: var(--clr-accent);
+	text-decoration: underline;
+}
+
+
+
+
+/*ARTICLE*/
+article{
+	position: relative;
+	grid-column: 2;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	margin-top: 5em;
+	height: auto;
+}
+
+article > *{
+	width: 100%;
+	max-width: 850px;
+}
+
+
+article > *:last-child{
+	margin-bottom: 0;
+}
+
+
+p{
+	margin: 1em 0;
+	line-height: 1.8em;
+}
+
+/*ARTICLE POST*/
+/*done locally in article.html*/
+
+/*ARTICLE IMAGE*/
+
+
+
+
+.articleimgwrap{
+	margin: 0;
+  padding: 0;
+	width: 100%;
+	max-width: 850px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.articleimg{
+	width: 100%;
+	max-width: 850px;
+ 	height: auto;
+    overflow: hidden;
+	object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+	margin-bottom: 5em !important;
+}
+
+
+
+/*CONTACT ICONS*/
+footer{
+	position: relative;
+	margin: 15em;
+	width: 100%;
+	max-width: 350px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+
+
+.contactimg > img{
+	margin: 0;
+	padding: 0;
+	--size: 1.8em;
+	height: var(--size);
+    max-width: var(--size);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.contactimg{
+	padding: 0;
+}
+.contactimg:first-child{
+	padding-left: 0;
+}
+
+.contactimg:last-child{
+	padding-right: 0;
+}
+
+
+footer > a:hover{
+	opacity: 1 !important;
+	cursor: pointer;
+}
+footer:hover > a{
+	opacity: .5;
+}
+.contacticons > a{
+	display: block;
+	padding: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1000px){
+
+	header{
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 850px 1fr;
+		align-items: center;
+	}
+
+	header > .logo,
+	header > nav{
+		display: unset;
+	}
+	header > nav{
+		text-align: unset;
+	}
+
+	.logo{
+		grid-column: 1;
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.logopic{
+		right: 0;
+		margin-right: 6em;
+	}
+
+
+	.gridfill{
+		grid-column: 3;
+		display: block !important;
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.logopic{
+		position: absolute;
+		max-width: 3em;
+	}
+	nav{
+		width: 100%;
+		grid-column: 2;
+		position: relative;
+		vertical-align: unset;
+		display: flex !important;
+		flex-direction: row;
+		justify-content: space-between;	
+	}
+	.nav_link{
+		font-size: 1em;
+		margin: .4em 0;
+	}
+}
+
+@media (min-width: 1980px){
+	.articleimgwrap,
+	.articleimg{
+		max-width: 40vw;
+	}
+	header{
+		grid-template-columns: 1fr 40vw 1fr;
+	}
+	.logopic{
+		max-width: 5em;
+	}
+}

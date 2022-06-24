@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{partial "styles.html" .}}
+	<title>{{.Params.title}}</title>
+	<link rel="icon" href="/graphics/logo.jpg" type="image/x-icon">
+	<script src="/js/toclipboard.js"></script>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+</head>
+<style>
+
+h1{
+	font-size: 2em;
+}
+
+.articlehead{
+	display: flex;
+}
+.articlehead > p{
+	margin-right: .5em;
+}
+
+
+
+</style>
+
+<body>
+<div class="main">
+
+ 	<!-- HEADER -->
+ 	{{partial "header.html" .}}
+ 	
+
+	<article>
+		{{$path := (printf "%s%s" "static/gallery/" .Params.data)}}
+		{{$contents := readDir $path}}
+		{{range seq  (len $contents)}}
+			<!-- IMAGES FORMAT-->
+			{{$format := (printf ".jpg")}}
+			<!-- NAME AND FILENAME -->
+			{{$name := (printf "%s%s" (string .) $format)}} 
+			{{$filename := printf "%s/%s" (replace $path "static" "") $name}}
+			<!-- DESCRIPTION FORMAT REMOVAL -->
+			{{$name := (printf (replace $name $format ""))}}
+
+			<div class="articleimgwrap">
+				<a href="{{$filename}}" class="glightbox" data-gallery="gallery1">
+					<img class="articleimg" src="{{$filename}}" alt="image"/>
+				</a>
+			</div>
+			
+			<!-- <p>{{$name}}</p> -->
+
+		{{end}}
+ 	</article>
+
+<script>
+
+const lightbox = GLightbox({
+		touchNavigation: true,
+		loop: true,
+});
+	
+</script>
+
+</div>
+</body>
+</html>
