@@ -1,8 +1,5 @@
 ---
-layout: portfolio
+data: gallery/portfolio
 title: Portfolio
-data: portfolio
+layout: portfoliotest
 ---
-
-![](/gallery/cgi/edit2_upscale.png)
-![](/gallery/cgi/DUNES16.jpg)
