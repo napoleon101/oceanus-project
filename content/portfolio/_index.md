@@ -1,5 +1,5 @@
 ---
 data: portfolio
 title: Portfolio
-layout: portfoliotest
+layout: portfolio
 ---
