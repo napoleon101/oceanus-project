@@ -3,9 +3,7 @@ title: About
 layout: aboutcontact
 ---
 
-- I am Oliver. A high-school student from Czech republic who has photography, 3D and films as a hobby but I sometimes extend it a bit further
-
-- This website was thus handcrafted by me as a means of presenting my work in a controlled and centralized place that is fully customizable according to what I need it to be at a particular time.
+- I am Oliver. A high-school student from Czech republic
 
 <div class="spacer"></div>
 
