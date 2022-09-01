@@ -1,8 +1,0 @@
-baseURL = 'https://oliverklimes.com/'
-languageCode = 'en-us'
-title = 'Oliver Klimeš'
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
