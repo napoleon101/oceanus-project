@@ -1,0 +1,14 @@
+
+:root{
+    --clr-accent: #E4002B;
+    --width: 850px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+

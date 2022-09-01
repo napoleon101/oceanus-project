@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{partial "styles.html" .}}
+	<title>{{.Params.title}}</title>
+	<link rel="icon" href="/graphics/logo.jpg" type="image/x-icon">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+	<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+</head>
+
+<style>
+article{
+	all: unset;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+p{
+	margin: 4px;
+	max-width: 74ch;
+}
+
+ul{
+	margin: 2em;
+}
+
+hr{
+	display: none;
+}
+
+.spacer{
+	display: block;
+	width: 100%;
+	height: 0em;
+}
+.contact{
+	text-align: center;
+	line-height: 3em;
+	margin-bottom: 20em;
+}
+</style>
+
+<body>
+<div class="main">
+
+ 	<!-- HEADER -->
+ 	{{partial "header.html" .}}
+ 	
+
+ 	<article >
+ 		<div class="articleimgwrap">
+				<img class="articleimg" src="/gallery/portfolio/profile.jpg	" alt="image" style="cursor: default; !important; margin-bottom: 1em;"/>
+		</div>
+ 		{{ .Content | replaceRE "<img" "<img class=\"articleimg \">" | safeHTML }}
+ 	</article>
+
+ </div>
+</body>
+</html>

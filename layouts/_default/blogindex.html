@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{partial "styles.html" .}}
+	<title>{{.Params.title}}</title>
+	<link rel="icon" href="/graphics/logo.jpg" type="image/x-icon">
+	<script src="/js/toclipboard.js"></script>
+</head>
+<style>
+
+article{
+	width: 100%;
+	max-width: 650px;
+}
+
+ul{
+	list-style: none;
+	position: relative;
+	left: 0;
+}	
+li > a{
+	color: black;
+	font-size: 1.1em;
+	font-weight: 700;
+	padding-right: 5em;
+	margin-right: -5em;
+}
+a:hover,
+a:active{
+	color: var(--clr-accent);
+}
+
+
+</style>
+<body>
+<div class="main">
+
+ 	<!-- HEADER -->
+ 	{{partial "header.html" .}}
+ 	
+
+ 	<article>
+ 		{{.Content}}
+ 		<ul>
+ 			{{ range .Pages }}
+ 				<li><a href="{{.RelPermalink}}"> 
+					 {{.PublishDate.Format "2006-01-02"}} 
+					 <br> 
+					 {{.Title}}</a>
+ 				</li>
+			{{end}}
+ 		</ul>
+ 	</article>
+
+ </div>
+</body>
+</html>
