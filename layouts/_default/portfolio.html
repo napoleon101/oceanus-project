@@ -14,18 +14,32 @@
 </head>
 <style>
 
-h1{
-	font-size: 2em;
-}
+/*This beautiful CSS by @joaosousa from CodePen - https://codepen.io/joaosousa/pen/vyMZBw*/
 
-.articlehead{
-	display: flex;
+article{
+display: block;
+  width: 100%;
+  max-width: 1800px;
+  -moz-columns: 1;
+       columns: 1;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin: 20px auto 50px;	
 }
-.articlehead > p{
-	margin-right: .5em;
+@media (min-width: 600px) {
+  article{
+    -moz-columns: 2;
+         columns: 2;
+  }
 }
-
-
+@media (min-width: 800px) {
+  article{
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
 
 </style>
 
